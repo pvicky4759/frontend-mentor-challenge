@@ -1,43 +1,201 @@
-body {
-    background-color: hsl(227, 74%, 94%);
-    text-align: center;
+.container{
+    width: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 0px;
+    background-color: hsl(36, 100%, 99%);
 }
-.content{
-    
-    font-family: sans-serif;
-    width: 250px;
-    padding: 7px;
-    margin: 25% auto;
-    border-radius: 7%;
-    background-color: rgba(245, 245, 245, 0.901);
-    box-shadow: 0px 20px 40px rgba(212, 211, 211, 0.549);
+.nav-item a:hover {
+    color: hsl(35, 77%, 62%);
 }
-img {
-    padding: 4px;
-    margin: 2% auto 5% auto;
-    width: 230px;
-    height: 230px;
-    border-radius: 7%;
+.top {
+    display: flex;
+    flex-direction: row;
 }
-h4{
-    font-weight: 700;
+.left {
+    width: 70%;
+    margin: 1%;
+    animation-name: left;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+}
+.img {
+    width: 100%;
+    height: 350px;
+}
+.right {
+    width: 35%;
+    padding: 2%;
+    margin: 1%;
+    background-color: hsl(238, 78%, 7%);;
+    color: azure;
+    animation-name: right;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+}
+.banner-text {
+    display: flex;
+    flex-direction: row;
+}
+.baner-heading {
+    flex: 1 1 0px;
+}
+.bright{
+    padding: 3%;
+    font-size: 3.4rem;
+    line-height: 3.4rem;
+    font-weight: 800;
+    color: hsl(238, 78%, 7%);
+}
+.main-desc {
+    flex: 1 1 0px;
     font-size: small;
-    padding: 0 4px 0 4px;
+    padding: 2% 0%;
+    padding-bottom: 0px;
+    line-height: 1rem;
+}
+.butn {
+    margin-top: 23%;
+}
+.button {
+    background-color: hsl(5, 85%, 63%);
+    width: 200px ;
+    padding: 3% 7%;
+    font-size: 22px;
+    font-weight: 400;
+    color: white;
+    border: 0px;
+    border-radius: 3px;
+}
+.button:hover {
+    background-color: hsl(238, 78%, 7%);
+}
+.head {
+    margin: 15px 0px ;
+    margin-bottom: 50px;
+    color: hsl(35, 77%, 62%);
+}
+h4 {
+    font-weight: 200;
+}
+h4:hover {
+    color: hsl(35, 77%, 62%);
 }
 p {
-    color: grey;
-    font-size: 15px;
-    padding: 0 4px 0 4px;
+    font-size: smaller;
+}
+.bottom {
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0px;
+    animation-name: bottom;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+}
+.cards {
+    display: flex;
+}
+.card-desc {
+    padding: 2%;
+}
+.one {
+    margin-right: 10px;
+}
+.card-desc h2 {
+    color: rgba(191, 205, 212, 0.876);
+}
+.card-desc h5 {
+    font-weight: 700;
+    margin: 10% 0%;
+}
+
+.card-desc h5:hover {
+    color: hsl(35, 77%, 62%);
+}
+.card-desc p {
+    font-size: smaller;
+    line-height: 1rem;
 }
 .attribution {
     font-size: 11px;
-    position: static;
     text-align: center;
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: hsl(228, 45%, 44%); 
+}
+/* for Mobile phones and tablets*/
+@media only screen and (max-width: 600px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 510px;
+        margin: 0px 20px;
+    }
+    .offcanvas-body {
+        margin-top: 20%;
+        text-align: left;
+    }
+    .offcanvas-header {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .top {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .left {
+        width: 100%;
+        animation: none;
+    }
+    .right {
+        width: 100%;
+        animation: none;
+    }
+    .butn {
+        margin: 5% 0%;
+    }
+    .banner-text {
+        display: flex;
+        flex-direction: column;
+    }
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        animation: none;
+    }
+    .cards {
+        padding-bottom: 5%;
+    }
+}
+/* some animation */
+@keyframes left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+     }
+}
+@keyframes right {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+     }
+}
+@keyframes bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+     }
 }
